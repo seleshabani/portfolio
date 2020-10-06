@@ -1,0 +1,236 @@
+/* global */
+html{
+  box-sizing: border-box;
+}
+::before,::after{
+  box-sizing: inherit;
+}
+p{
+  color: rgb(162,162,162);
+  font-size: 28px;
+}
+/* Layout */
+body{
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.75;
+  font-family: "Open sans",sans-serif;
+}
+.l-container{
+  width: 90%;
+  margin: 0 auto;
+}
+.header{
+  background: url(img/img-header.png) center top no-repeat fixed;
+  background-size: cover;
+  padding-bottom: 300px;
+  padding-top: 80px;
+}
+.localisation {
+  background: url(../img/carte.png) center top no-repeat fixed;
+  background-size: cover;
+  padding-bottom: 300px;
+  padding-top: 80px;
+}
+.header-logo{
+  display: block;
+  float: left;
+}
+
+/* menu */
+.menu{
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+  padding-top: 70px;
+  float: right;
+  text-align: right;
+}
+.menu-item{  color: #fff;transition: 400ms;}
+.menu-item:first-child::before{
+  display: none;  
+}
+.menu-item::before{
+  content: '//';
+  padding: 0 37px;
+}
+.menu-item:hover{
+  color: rgb(243,156,18);;
+}
+.header-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 300;
+  color: #fff;
+  margin-top: 45px;
+  padding-top: 10px;
+}
+.header-text-lite{
+  font-size: 45px;
+  line-height: 57px;
+}
+.header-text-bold{
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 80px;
+}
+.header-btn-action{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+}
+.btn{
+  display: block;
+  width: 158px;
+  height: 46px;
+  color: #fff;
+
+  border: lightslategray 1px;
+  background-color: rgb(243,156,18);
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  padding-top: 5px;
+}
+.btn:hover {
+  box-shadow: 0 .5em .25em -.25em rgba(0, 0, 0, .2);
+
+  transition: 300ms;
+}
+.section,.section-sans-zone-diag{
+  background-color: #fff;
+  margin-top: -20px;
+}
+.section-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 152px;
+}
+.section-title h1{
+  font-size: 30px;
+  line-height: 25px;
+  border-right: 4px solid rgb(243,156,18);
+  margin-right: 20px;
+  padding-right: 20px;
+  padding-top: 10px ;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  width: 20%;
+}
+.section-title p{
+  padding-top: 10px ;
+  text-align: left;
+  font-size: 16px;
+  line-height: 25px;
+  width: 80%;
+  word-wrap: break-word;
+}
+.section::before{
+  display: block;
+  content: "";
+  height: 50px;
+  width: 100%;
+  position: relative;
+  top: -25px;
+  left: 1px;
+  transform: rotate(-2deg);
+  background-color: white;
+}
+.section-after-block::after{
+  display: block;
+  content: "";
+  height: 55px;
+  width: 100%;
+  position: relative;
+  bottom: -20px;
+  transform: rotate(-2deg);
+  background-color: white;
+  padding-left: 0px;
+}
+
+/* défini aussi l'élipse des icones */
+.section-content-icone {
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(243, 156, 18);
+  border-radius: 50%;
+  width: 125px;
+  height: 131px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-separator {
+  width: 90%;
+  height: 15px;
+  border-top: solid 2px rgb(230, 230, 230);
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 5%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.section-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.section-content .section-content-text {
+  width: 40%;
+}
+.section-content .section-content-image {
+  width: 449px;
+}
+.section-content-title {
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: bold;
+  color: black;
+}
+.section-content-red p{
+  font-size: 20px;
+  line-height: 28px;
+  color: rgb(231,76,60);
+}
+.section-content-text p{
+  font-size: 20px;
+  line-height: 28px;
+}
+/* .section-content-text-range {
+
+} */
+/* .section-content-text-range{} */
+.section-content-text-range-item{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+.section-content-text-range-item label{
+  font-size: 16px;
+  line-height: 28px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.section-content-text-range-item label .nbr{
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: normal;
+}
+.section-content-text-range-container {
+  background-color: lightgray;
+  display: block;
+  height: 10px;
+  width: 100%;
+}
+.section-content-text-range-item-input {
+  background-image: linear-gradient(0deg, rgb(243,156,18) 0%, rgb(243,156,18) 88%, rgb(230,230,230) 88%);
+  display: block;
+  height: 10px;
+}
+
+/* nettoie le float */
+.cb{clear: both;}
