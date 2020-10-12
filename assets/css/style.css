@@ -27,6 +27,7 @@ html {
 
 body {
     background-image: var(--background-image);
+    background-repeat: no-repeat;
     background-size: cover;
     font-family: var(--font-family);
     display: flex;
@@ -46,12 +47,10 @@ p {
     flex-wrap: wrap;
     justify-content: space-between;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    
-    border: solid red 1px;
 }
 .container-text-zone {
     width: 60%;
-    height: 450px;
+    /* height: 450px; */
     display: flex;
     flex-direction: column;
 }
@@ -72,6 +71,7 @@ p {
     height: 50%;
     border-radius: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 .competence-icone i {
     font-size: 30px;
@@ -84,7 +84,11 @@ p {
     /* border-bottom: solid rgba(0, 0, 0, 0.2) 3px ; */
     padding-bottom: 10px;
     margin-bottom: 5px;
-    height: 330px;
+    height: 300px;
+    /* border: solid yellow 1px; */
+}
+.container-text-zone-competence p {
+    font-size: 0.85rem;
 }
 .contact-link {
     width: 100%;
@@ -108,4 +112,5 @@ p {
     margin: auto;
     border-bottom: solid rgba(0, 0, 0, 0.2) 3px ;
     margin-bottom: 10px;
+    margin-top: 5px;
 }
