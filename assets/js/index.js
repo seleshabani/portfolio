@@ -1,12 +1,12 @@
 import {Slider} from "./Slider.js";
 import modal from "./modal.js";
 
-let imgEl = document.querySelector(".img-profil");
-let url = window.location.href + "/img/";
+const imgEl = document.querySelector(".img-profil");
+const url = window.location.href + "/img/";
 let imgs = ["sele.jpg","sele2.jpg"];
 let imgsL = imgs.length;
-let overlay = document.querySelector(".overlay");
-let modalEL = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const modalEL = document.querySelector(".modal");
 
 const Sldr = new Slider(imgEl,imgs,imgsL,url);
 const modalObj = new modal(modalEL);
