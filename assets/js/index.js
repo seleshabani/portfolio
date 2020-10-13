@@ -1,8 +1,8 @@
-import {Slider} from "./Slider.js";
+import {Slider} from "./slider.js";
 import modal from "./modal.js";
 
 const imgEl = document.querySelector(".img-profil");
-const url = window.location.href + "/img/";
+const url = "img/";
 let imgs = ["sele.jpg","sele2.jpg"];
 let imgsL = imgs.length;
 const overlay = document.querySelector(".overlay");

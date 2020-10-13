@@ -8,6 +8,11 @@ export class Slider {
         this.start = 0;
         this.url = url;
     }
+    /**
+     * @param {*} url url vers le dossier img
+     * @param {*} s callback en cas de succées
+     * @param {*} er callback en cas d'échec
+     */
     getImg(url,s,er) {
         let xhr = new XMLHttpRequest;
         xhr.open("GET",url,true);
@@ -36,6 +41,6 @@ export class Slider {
                 }
             },(erM)=>{})
             this.imgEl.classList.remove('animate-profil-invers');
-        },5000);
+        },4000);
     }
 }
