@@ -1,4 +1,4 @@
-export default class Slider {
+class Slider {
     
     constructor(imgEl,imgs,imgsL,url) {
         this.imgEl = imgEl;
@@ -44,3 +44,4 @@ export default class Slider {
         },4000);
     }
 }
+export default Slider;
