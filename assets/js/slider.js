@@ -44,4 +44,4 @@ class Slider {
         },4000);
     }
 }
-export default Slider;
+export default Slider

@@ -1,4 +1,4 @@
-import {Slider} from "./slider.js";
+import Slider from "./slider.js";
 import modal from "./modal.js";
 
 const imgEl = document.querySelector(".img-profil");
