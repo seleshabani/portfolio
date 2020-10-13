@@ -1,4 +1,4 @@
-export class Slider {
+export default class Slider {
     
     constructor(imgEl,imgs,imgsL,url) {
         this.imgEl = imgEl;
