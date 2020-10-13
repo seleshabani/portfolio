@@ -1,6 +1,7 @@
 class modal {
 
     titleEl;
+    htmlTitle;
     contentEL;
 
     /**
@@ -14,6 +15,13 @@ class modal {
         this.title = title;
         this.titleEl = document.querySelector(".modal .modal-title h1");
         this.titleEl.innerText = title;
+    }
+    setHtmlTitle(htmlTitle){
+        this.htmlTitle = htmlTitle;
+        this.titleEl = document.querySelector(".modal .modal-title h1");
+        this.titleEl.innerText = " "
+        this.titleEl.appendChild(htmlTitle)
+        console.log(this.titleEl.innerHtml)
     }
     setContent() {
 
