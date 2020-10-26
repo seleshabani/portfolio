@@ -9,11 +9,12 @@ class modal {
      * @param {*} HtmlEl l'élèment html répresentant le modal
      */
     constructor(HtmlEl) {
-        this.modalEl = HtmlEl
+        this.modalEl = HtmlEl;
+        this.titleEl = document.querySelector(".modal .modal-title h1");
+        this.contentEL = document.querySelector(".modal .modal-content");
     }
     setTitle(title) {
         this.title = title;
-        this.titleEl = document.querySelector(".modal .modal-title h1");
         this.titleEl.innerText = title;
     }
     setHtmlTitle(htmlTitle){
@@ -21,10 +22,11 @@ class modal {
         this.titleEl = document.querySelector(".modal .modal-title h1");
         this.titleEl.innerText = " "
         this.titleEl.appendChild(htmlTitle)
-        console.log(this.titleEl.innerHtml)
+      //  console.log(this.titleEl.innerHtml)
     }
-    setContent() {
-
+    setContent(content) {
+        console.log(this.contentEL)
+        this.contentEL.innerText = content;
     }
     show() {
         this.modalEl.style.display = "flex";

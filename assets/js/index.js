@@ -22,11 +22,14 @@ overlay.addEventListener("click",() => {
     overlay.style.display = "none";
     modalObj.hide();
 })
+
+// 
 iconsComp.forEach((icone)=>{
     icone.addEventListener("click",()=>{
         overlay.style.display = "flex";
         let CopyIcone = icone.cloneNode(true);
         modalObj.setHtmlTitle(CopyIcone);
+        modalObj.setContent("bonjour")
         modalObj.show()
     })
 },modalObj)
