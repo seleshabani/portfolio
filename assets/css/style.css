@@ -69,6 +69,7 @@ p {
 .container-img-zone {
     width: 30%;
     text-align: center;
+    animation: imgZoneLoading 450ms ease-in-out 400ms;
 }
 .container-img-zone img{
     width: 100%;
@@ -126,15 +127,15 @@ p {
     margin-top: 5px;
 }
 .animate-profil {
-    animation: opct 400ms linear;
+    animation: opct 400ms ease-in-out;
 }
 .animate-profil-invers {
-    animation: opctInvers 400ms ease;
+    animation: opctInvers 400ms ease-in;
 }
 .modal {
     display: none;
     width: 50%;
-    height: 100px;
+    height: auto;
     background-color: var(--container-background-color) ;
     border-radius: var(--border-raduis);
     z-index: 3;
@@ -187,3 +188,11 @@ p {
         opacity: 1;
     }
 }
+@keyframes imgZoneLoading {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+} 

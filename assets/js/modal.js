@@ -25,7 +25,7 @@ class modal {
       //  console.log(this.titleEl.innerHtml)
     }
     setContent(content) {
-        console.log(this.contentEL)
+      //  console.log(this.contentEL)
         this.contentEL.innerText = content;
     }
     show() {

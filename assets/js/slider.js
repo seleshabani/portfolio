@@ -30,17 +30,21 @@ class Slider {
     slide() {
         setInterval(() => {
             this.imgUrl = this.url + this.imgs[this.start];
+            //this.imgEl.classList.remove('animate-profil-invers');
+            //this.imgEl.classList.add('animate-profil');
+
+            this.imgEl.classList.remove('animate-profil');
             this.getImg(this.imgUrl,(img) => {
+                this.imgEl.classList.add('animate-profil');
                 this.imgEl.setAttribute("src",img)
-                this.imgEl.classList.add('animate-profil-invers');
                 this.start = this.start + 1;
                 this.imgsL = this.imgsL - 1;
                 if(this.imgsL === 0) {
                     this.start = 0;
                     this.imgsL = this.imgs.length;
                 }
+                //this.imgEl.classList.remove('animate-profil');
             },(erM)=>{})
-            this.imgEl.classList.remove('animate-profil-invers');
         },4000);
     }
 }
