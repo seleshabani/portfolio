@@ -13,7 +13,7 @@ const Sldr = new Slider(imgEl,imgs,imgsL,url);
 const modalObj = new modal(modalEL);
 
 
-Sldr.slide()
+//Sldr.slide()
 imgEl.addEventListener("click",() => {
     overlay.style.display = "flex";
     modalObj.setTitle("Sele Shabani");
