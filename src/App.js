@@ -11,6 +11,7 @@ import About from './containers/About';
 import Skils from './containers/Skils';
 import Realisations from './containers/Realisatons';
 import Certifications from './containers/Certifications';
+import To404 from './components/To404';
 
 const App = (props)=> {
 
@@ -59,6 +60,7 @@ const App = (props)=> {
         <Route path={'/skils'} exact component={Skils}/>
         <Route path={'/realisations'} exact component={Realisations}/>
         <Route path={'/certifications'} exact component={Certifications}/>
+        <Route path={'*'} component={To404}/>
       </Switch>
       <ParticlesBg color="#000000" type="lignes" bg={true} config={config}/>
     </div>

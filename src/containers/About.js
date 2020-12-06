@@ -1,9 +1,12 @@
 import React from 'react'
+import { Image } from 'semantic-ui-react'
+import sele from '../assets/sele.jpg'
 
 const About = ()=>{
     return(
         <div>
-            <h1>About</h1>
+            <Image src={sele} size='small' circular/>
+            <h1>Hi, i'm Sele Shabani.</h1>
         </div>
     )
 }

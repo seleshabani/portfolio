@@ -11,7 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.TabsMenu{
+.App{
   width: 80%!important;
   margin: auto!important;
+}
+.TabsMenu{
+  margin-bottom: 35px!important;
+}
+h1{
+  font-family: 'Nerko One', cursive!important;
 }
