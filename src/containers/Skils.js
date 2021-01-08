@@ -3,14 +3,14 @@ import { Icon } from 'semantic-ui-react';
 import styles from '../assets/skillsStyles';
 import Desktopdev from '../components/desktopdev';
 import Mobiledev from '../components/mobiledev';
+import Otherdev from '../components/otherDev';
 import Webdev from '../components/webdev'
 const Skils = ()=>{
     const [view,setView] = useState(1);
 
     const changeView = ()=>{
-        if (view >= 3) {
+        if (view >= 4) {
             setView(1);
-            console.log(view)
         }else{
             setView(view+1);
         }
@@ -23,6 +23,8 @@ const Skils = ()=>{
                 return <Desktopdev/>
             case 3:
                 return <Mobiledev/>
+            case 4:
+                return <Otherdev/>
             default:
                 break;
         }
