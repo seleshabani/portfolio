@@ -6,7 +6,7 @@ const About = ()=>{
     return(
         <div style={styles.main}>
             <div style={styles.presentation}>
-                <Image style={styles.img} src={sele} size='small' circular/>
+                <Image style={styles.img} src={sele} size='small' circular bordered avatar/>
                 <div style={styles.contentBloc}>
                     <h1 style={styles.h1}>Hi, i'm {"<Sele Shabani/>"}.</h1>
                     <h2 style={styles.h2}>
@@ -24,7 +24,7 @@ const About = ()=>{
                 <h2 style={{...styles.h2,...styles.h2aside}}>#Freeleance</h2>
                 <p style={styles.p}>
                     You can call me for all software application(not necessary computer science projects) project you have, 
-                    I will help you or you team for make it become reality.
+                    I will help you or your team for make it become reality.
                 </p>
             </div>
             <div style={styles.aside}>
