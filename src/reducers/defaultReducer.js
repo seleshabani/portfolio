@@ -1,6 +1,6 @@
 const defaultState = {
     isLoading:false,
-    activeItem: 'home'
+    activeItem: 'About-Me'
 };
 
 const defaultReducer = (state = defaultState, action) =>{

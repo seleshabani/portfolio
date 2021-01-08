@@ -55,7 +55,7 @@ const App = (props)=> {
         </Menu.Menu>
       </Menu>
       <Switch>
-        <Route path={'/'} exact component={Home}/>
+        <Route path={'/'} exact component={About}/>
         <Route path={'/about-me'} exact component={About}/>
         <Route path={'/skils'} exact component={Skils}/>
         <Route path={'/realisations'} exact component={Realisations}/>
