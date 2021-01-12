@@ -1,16 +1,18 @@
 import React from 'react'
 import ParticlesBg from 'particles-bg'
 import {config} from './particles_config';
+// import Particles from "react-tsparticles";
 import {Route, Switch, useHistory} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'
 import { changePage } from './actions/defaultAction'
-import { Menu} from 'semantic-ui-react'
+import { Menu } from 'semantic-ui-react'
 import './App.css';
 import About from './containers/About';
 import Skils from './containers/Skils';
 import Realisations from './containers/Realisatons';
 import Certifications from './containers/Certifications';
 import To404 from './components/To404';
+// import { tsconfig } from './assets/tsparticles_conf';
 
 const App = (props)=> {
 
@@ -24,7 +26,12 @@ const App = (props)=> {
   }
   return (
     <div className="App">
-      <Menu className="TabsMenu" pointing secondary>
+       {/* <Particles
+        id="tsparticles"
+        options={tsconfig}
+        style={{position: "fixed",zIndex: "-1",width:"100%",height:"100%"}}
+      /> */}
+      <Menu style={{zIndex: "1"}} className="TabsMenu" pointing secondary>
         <Menu.Item
           style={styles.menuItem}
           name='About-Me'
@@ -66,7 +73,8 @@ const App = (props)=> {
         <Route path={'/certifications'} exact component={Certifications}/>
         <Route path={'*'} component={To404}/>
       </Switch>
-      <ParticlesBg color="#000000" type="lignes" bg={true} config={config}/>
+      <ParticlesBg style={styles.particles} type="color" bg={true} config={config}/>
+     
     </div>
   );
 }
@@ -77,6 +85,17 @@ const styles = {
   },
   particles:{
     backgroundColor:'black'
+  }
+}
+
+const THEMES = {
+  dark:{
+    backgroundColor:'black',
+    color:'white'
+  },
+  light:{
+    backgroundColor:'white',
+    color:'black'
   }
 }
 export default App;

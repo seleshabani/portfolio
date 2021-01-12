@@ -5,7 +5,7 @@ export const config = {
     life: [1.5, 3],
     v: [2, 3],
     tha: [-40, 40],
-    // body: "./img/icon.png", // Whether to render pictures
+    body: "app", // Whether to render pictures
     // rotate: [0, 20],
     alpha: [0.6, 0],
     scale: [1, 0.1],

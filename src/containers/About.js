@@ -39,7 +39,8 @@ const About = ()=>{
 const styles = {
     main:{
         display:'flex',
-        flexDirection:'column'
+        flexDirection:'column',
+        zIndex:'1'
     },
     presentation:{
         display:'flex',
