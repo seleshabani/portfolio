@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux';
 import { Icon } from 'semantic-ui-react';
 import styles from '../assets/skillsStyles';
 import Desktopdev from '../components/desktopdev';
@@ -6,8 +7,9 @@ import Mobiledev from '../components/mobiledev';
 import Otherdev from '../components/otherDev';
 import Webdev from '../components/webdev'
 const Skils = ()=>{
-    const [view,setView] = useState(1);
 
+    const [view,setView] = useState(1);
+    const RootState = useSelector(dRed=>dRed.defaultReducer);
     const changeView = ()=>{
         if (view >= 4) {
             setView(1);
@@ -29,7 +31,19 @@ const Skils = ()=>{
                 break;
         }
     }
-
+    useEffect(()=>{
+        let cards = document.querySelectorAll('.ui.card');
+        if (RootState.theme==='dark') {
+            cards.forEach(card=>{
+                card.style.backgroundColor = 'black';
+            })
+        }else{
+            cards.forEach(card=>{
+                card.style.backgroundColor = 'white';
+            })
+        }
+    },[view,RootState.theme])
+    
     return(
         <div style={styles.main}>
             {selectView()}

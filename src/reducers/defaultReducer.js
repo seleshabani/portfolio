@@ -1,5 +1,6 @@
 const defaultState = {
     isLoading:false,
+    theme:'light',
     activeItem: 'About-Me'
 };
 
@@ -17,6 +18,12 @@ const defaultReducer = (state = defaultState, action) =>{
                     isLoading:false,
                     activeItem:action.payload
                 };
+            case 'TOGGLE_THEME':
+                const newTheme = state.theme === 'light'?'dark':'light';
+                return {
+                    ...state,
+                    theme:newTheme
+                }
             default:
                 return state;
         }

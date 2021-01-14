@@ -1,12 +1,14 @@
 import React from 'react'
-import { Icon, Image } from 'semantic-ui-react'
+import { Icon, Image, Modal } from 'semantic-ui-react'
 import sele from '../assets/sele_mini.jpg'
-
+import sele2 from '../assets/sele.jpg'
 const About = ()=>{
     return(
         <div style={styles.main}>
             <div style={styles.presentation}>
-                <Image style={styles.img} src={sele} size='small' circular bordered avatar/>
+                <Modal size="mini" trigger={<Image style={styles.img} src={sele} size='small' circular bordered avatar/>}>
+                    <Image src={sele2} bordered/>
+                </Modal>
                 <div style={styles.contentBloc}>
                     <h1 style={styles.h1}>Hi, i'm {"<Sele Shabani/>"}.</h1>
                     <h2 style={styles.h2}>
@@ -51,7 +53,8 @@ const styles = {
         fontFamily:'Nerko One',
     },
     img:{
-        marginRight:'105px'
+        marginRight:'105px',
+        cursor:'pointer'
     },
     contentBloc:{
         display:'flex',

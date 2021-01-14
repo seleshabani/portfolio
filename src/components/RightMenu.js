@@ -1,42 +1,31 @@
-import React, { useCallback, useState,useEffect } from 'react'
+import React, { useCallback, useState } from 'react'
+import { useDispatch } from 'react-redux';
 import {Menu,Dropdown,DropdownMenu,Icon,Radio} from 'semantic-ui-react'
+import { changeTheme } from '../actions/defaultAction';
 const RightMenu = ()=>{
-    const [flag,setFlag] = useState(false);
-
-   //  useEffect(()=>{
-   //    toggleNightMode();
-   //  },[]);
-
-    const toggleNightMode = useCallback(()=>{
-       let canvas = document.querySelectorAll('canvas')[1];
-       let body = document.querySelector('body');
-       let cards = document.querySelectorAll('.ui.card');
-       setFlag(flag=>!flag);
-
+   const [flag,setFlag] = useState(false);
+   const dispatch = useDispatch();
+   const toggleNightMode = useCallback(()=>{
+     
+      const canvas = document.querySelectorAll('canvas');
+      const body = document.querySelector('body');
+      
+      if (canvas.length>1) {
+         setFlag(!flag);
          if (flag) {
-            
-             canvas.style.backgroundColor = 'black';
-             body.style.color = 'white';
-             if (cards.length>1) {
-               cards.forEach(card=>{
-                  card.style.backgroundColor = 'black';
-               })
-             }
-            
+            canvas[1].style.backgroundColor = 'white';
+            body.style.color = 'black';
          }else{
-             canvas.style.backgroundColor = 'white';
-             body.style.color = 'black';
-             if (cards.length>1) {
-               cards.forEach(card=>{
-                  card.style.backgroundColor = 'white';
-               })
-             }
+            canvas[1].style.backgroundColor = 'black';
+            body.style.color = 'white';
          }
+         dispatch(changeTheme());
+      }
    })
 
     return  <Menu.Menu position='right'>
             <Menu.Item>
-               {flag?<Icon name="sun"/>:<Icon name="moon"/>}
+               {flag?<Icon name="moon"/>:<Icon name="sun"/>}
                <Radio slider={true} onChange={toggleNightMode}/>
             </Menu.Item>
             <Menu.Item>

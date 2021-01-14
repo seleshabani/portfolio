@@ -11,3 +11,14 @@ export const changePage = (page)=>async dispatch=>{
         })
     }
 }
+export const changeTheme = ()=>async dispatch=>{
+    try{
+        dispatch({
+            type:'TOGGLE_THEME'
+        })
+    }catch{
+        dispatch({
+            type:'TOGGLE_THEME_FAIL'
+        })
+    }
+}
