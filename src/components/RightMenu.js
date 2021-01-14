@@ -12,23 +12,25 @@ const RightMenu = ()=>{
        let body = document.querySelector('body');
        let cards = document.querySelectorAll('.ui.card');
        setFlag(flag=>!flag);
-       
+
          if (flag) {
+            
              canvas.style.backgroundColor = 'black';
              body.style.color = 'white';
-             
+             if (cards.length>1) {
                cards.forEach(card=>{
                   card.style.backgroundColor = 'black';
                })
-             
+             }
+            
          }else{
              canvas.style.backgroundColor = 'white';
              body.style.color = 'black';
-             
+             if (cards.length>1) {
                cards.forEach(card=>{
                   card.style.backgroundColor = 'white';
                })
-             
+             }
          }
    })
 
