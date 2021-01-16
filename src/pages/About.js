@@ -2,7 +2,10 @@ import React from 'react'
 import { Icon, Image, Modal } from 'semantic-ui-react'
 import sele from '../assets/sele_mini.jpg'
 import sele2 from '../assets/sele.jpg'
+import { useSelector } from 'react-redux'
 const About = ()=>{
+    const reducerState = useSelector(dr=>dr.defaultReducer);
+
     return(
         <div style={styles.main}>
             <div style={styles.presentation}>
@@ -15,10 +18,10 @@ const About = ()=>{
                         Develloper and web pationate, Living at Kinshasa Drc.
                     </h2>
                     <p>
-                        <a style={styles.a} href="facebook.com"><Icon name="facebook"></Icon></a>
-                        <a style={styles.a} href="instagram.com"><Icon name="instagram"></Icon></a>
-                        <a style={styles.a} href="twitter.com"><Icon name="twitter"></Icon></a>
-                        <a style={styles.a} href="github.com/seleshabani"><Icon name="github"></Icon></a>
+                        <a style={reducerState.theme==='light'?styles.aLight:styles.aDark} href="facebook.com"><Icon name="facebook"></Icon></a>
+                        <a style={reducerState.theme==='light'?styles.aLight:styles.aDark} href="instagram.com"><Icon name="instagram"></Icon></a>
+                        <a style={reducerState.theme==='light'?styles.aLight:styles.aDark} href="twitter.com"><Icon name="twitter"></Icon></a>
+                        <a style={reducerState.theme==='light'?styles.aLight:styles.aDark} href="github.com/seleshabani"><Icon name="github"></Icon></a>
                     </p>
                 </div>
             </div>
@@ -80,9 +83,15 @@ const styles = {
         textAlign:'left',
         fontSize:'1.5rem'
     },
-    a:{
+    aLight:{
         textDecoration:'none',
         color:'black',
+        fontSize:'1.2rem',
+        margin:'5px'
+    },
+    aDark:{
+        textDecoration:'none',
+        color:'white',
         fontSize:'1.2rem',
         margin:'5px'
     },

@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { changePage } from '../actions/defaultAction'
 import RightMenu from './RightMenu';
 
-const NavMenu = ()=>{
+const NavMenu = ({menuItemStyle,menuStyle})=>{
     const globalState = useSelector(state=>state.defaultReducer)
     const dispatch = useDispatch();
     const activeItem = globalState.activeItem
@@ -15,27 +15,27 @@ const NavMenu = ()=>{
         history.push(`/${name}`)
     }
     return (
-        <Menu style={{zIndex: "1"}} className="TabsMenu" pointing secondary>
+        <Menu style={{zIndex:"1",...menuStyle}} className="TabsMenu" pointing secondary>
             <Menu.Item
-            style={styles.menuItem}
+            style={menuItemStyle}
             name='About-Me'
             active={activeItem === 'About-Me'}
             onClick={handleItemClick}
             />
             <Menu.Item
-            style={styles.menuItem}
+            style={menuItemStyle}
             name='Skils'
             active={activeItem === 'Skils'}
             onClick={handleItemClick}
             />
             <Menu.Item
-            style={styles.menuItem}
+            style={menuItemStyle}
             name='Realisations'
             active={activeItem === 'Realisations'}
             onClick={handleItemClick}
             />
             <Menu.Item
-            style={styles.menuItem}
+            style={menuItemStyle}
             name='Certifications'
             active={activeItem === 'Certifications'}
             onClick={handleItemClick}
@@ -44,11 +44,5 @@ const NavMenu = ()=>{
       </Menu>
     )
 }
-const styles = {
-    menuItem:{
-      fontFamily:'Nerko One',
-      fontSize:'1.3rem'
-    },
-  }
   
 export default NavMenu;

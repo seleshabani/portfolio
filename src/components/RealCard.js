@@ -1,14 +1,14 @@
 import React from 'react';
 import { Card, CardContent, Reveal,Image, CardHeader, CardDescription, } from 'semantic-ui-react';
 import placeholder from '../assets/placeholder.png'
-const RealCard = ({title,image,description})=>{
+const RealCard = ({title,image,description,themeStyle})=>{
     return <Reveal animated='move down'>
                 <Reveal.Content visible>
-                <Card>
+                <Card style={themeStyle}>
                     <CardDescription>
-                    <h3>{title}</h3>
+                    <h3 style={themeStyle}>{title}</h3>
                     </CardDescription>
-                    <CardContent>
+                    <CardContent style={themeStyle}>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati officiis eveniet iste, alias aut adipisci inventore quidem ex perferendis distinctio fugiat deserunt libero dolor consequatur quod nisi non hic quia!</p>
                     </CardContent>
                 </Card>

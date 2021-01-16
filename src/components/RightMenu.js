@@ -17,7 +17,7 @@ const RightMenu = ()=>{
 
     return  <Menu.Menu position='right'>
             <Menu.Item>
-               {theme==='light'?<Icon name="sun"/>:<Icon name="moon"/>}
+               {theme==='light'?<Icon color="yellow" name="sun"/>:<Icon color='grey' name="moon"/>}
                <Radio slider={true}  onChange={toggleNightMode}/>
             </Menu.Item>
             <Menu.Item>
@@ -27,7 +27,7 @@ const RightMenu = ()=>{
                            <h3>Fr</h3>
                      </Dropdown.Item>
                      <Dropdown.Item>
-                           <h3>Us</h3>
+                           <h3>En</h3>
                      </Dropdown.Item>
                   </DropdownMenu>
                </Dropdown>
