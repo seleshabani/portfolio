@@ -1,32 +1,24 @@
-import React, { useCallback, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import {Menu,Dropdown,DropdownMenu,Icon,Radio} from 'semantic-ui-react'
 import { changeTheme } from '../actions/defaultAction';
 const RightMenu = ()=>{
-   const [flag,setFlag] = useState(false);
+   const [theme,setTheme] = useState('light');//false=mode light
    const dispatch = useDispatch();
-   const toggleNightMode = useCallback(()=>{
-     
-      const canvas = document.querySelectorAll('canvas');
-      const body = document.querySelector('body');
-      
-      if (canvas.length>1) {
-         setFlag(!flag);
-         if (flag) {
-            canvas[1].style.backgroundColor = 'white';
-            body.style.color = 'black';
-         }else{
-            canvas[1].style.backgroundColor = 'black';
-            body.style.color = 'white';
-         }
-         dispatch(changeTheme());
-      }
-   })
+   
+   const toggleNightMode = ()=>{
+     let t = theme === 'light'?'dark':'light'
+     setTheme(t)
+   }
+
+   useEffect(()=>{
+      dispatch(changeTheme(theme))
+   },[theme,dispatch])
 
     return  <Menu.Menu position='right'>
             <Menu.Item>
-               {flag?<Icon name="moon"/>:<Icon name="sun"/>}
-               <Radio slider={true} onChange={toggleNightMode}/>
+               {theme==='light'?<Icon name="sun"/>:<Icon name="moon"/>}
+               <Radio slider={true}  onChange={toggleNightMode}/>
             </Menu.Item>
             <Menu.Item>
                <Dropdown placeholder='Trad'>

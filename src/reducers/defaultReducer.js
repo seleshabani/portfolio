@@ -19,10 +19,9 @@ const defaultReducer = (state = defaultState, action) =>{
                     activeItem:action.payload
                 };
             case 'TOGGLE_THEME':
-                const newTheme = state.theme === 'light'?'dark':'light';
                 return {
                     ...state,
-                    theme:newTheme
+                    theme:action.payload
                 }
             default:
                 return state;

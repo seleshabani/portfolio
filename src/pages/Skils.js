@@ -42,7 +42,7 @@ const Skils = ()=>{
                 card.style.backgroundColor = 'white';
             })
         }
-    },[view,RootState.theme])
+    },[view,RootState])
     
     return(
         <div style={styles.main}>

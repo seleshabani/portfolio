@@ -1,10 +1,17 @@
 import React from 'react'
+import RealCard from '../components/RealCard'
 
 const Realisations = ()=>{
     return(
         <div>
-            <h1>Realisations</h1>
+            <RealCard/>
         </div>
     )
+}
+const styles = {
+    main:{
+        display:'flex',
+        fontFamily:'Nerko One'
+    }
 }
 export default Realisations;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import ParticlesBg from 'particles-bg'
 import {config} from './particles_config';
 // import Particles from "react-tsparticles";
@@ -10,13 +10,16 @@ import Certifications from './pages/Certifications';
 import To404 from './components/To404';
 import NavMenu from './components/Menu';
 import './App.css';
+import { useSelector } from 'react-redux';
 // import { tsconfig } from './assets/tsparticles_conf';
 
 const App = (props)=> {
 
+  const reducerState = useSelector(dr=>dr.defaultReducer)
+  const particleRef = useRef();
+
   return (
     <div className="App">
-    
       <NavMenu/>
       <Switch>
         <Route path={'/'} exact component={About}/>
@@ -26,7 +29,7 @@ const App = (props)=> {
         <Route path={'/certifications'} exact component={Certifications}/>
         <Route path={'*'} component={To404}/>
       </Switch>
-      <ParticlesBg style={styles.particles} type="color" bg={true} config={config}/>
+      <ParticlesBg ref={particleRef} style={styles.particles} color={reducerState.theme==='light'?'#ffffff':'#000000'} type="lines" bg={true}/>
     </div>
   );
 }
