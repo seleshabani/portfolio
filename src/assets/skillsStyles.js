@@ -12,7 +12,7 @@ const styles = {
         display:'flex',
         flexDirection:'row',
         justifyContent:'space-between',
-        alignItems:'center',
+        alignItems:'baseline',
         alignContent:'center'
 
     },
@@ -20,11 +20,14 @@ const styles = {
         display:'flex',
         flexDirection:'row',
         justifyContent:'space-evenly',
+        alignItems:'baseline',
+        alignContent:'baseline'
     },
     h2:{
         fontFamily:'Nerko One',
         fontSize:'2rem',
-        textAlign:'left'
+        textAlign:'left',
+       
     },
     h2card:{
         fontFamily:'Nerko One',

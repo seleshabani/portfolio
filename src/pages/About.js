@@ -25,18 +25,32 @@ const About = ()=>{
                     </p>
                 </div>
             </div>
-            <div style={styles.aside}>
-                <h2 style={{...styles.h2,...styles.h2aside}}>#Freeleance</h2>
-                <p style={styles.p}>
-                    You can call me for all software application(not necessary computer science projects) project you have, 
-                    I will help you or your team for make it become reality.
-                </p>
-            </div>
-            <div style={styles.aside}>
-                <h2 style={{...styles.h2,...styles.h2aside}}>#ImSearchingAJob</h2>
-                <p style={styles.p}>
-                    I came to get my graduation bac +3 on computer science, and i'm searching a good job where i can exploit my talent, if you know one Call Me (+243821419199,+243997184779) ;).
-                </p>
+            <div style={styles.row}>
+                <div style={styles.rowContent1}>
+                    <div style={styles.aside}>
+                        <h2 style={{...styles.h2,...styles.h2aside}}>#Freeleance</h2>
+                        <p style={styles.p}>
+                            You can call me for all software application(not necessary computer science projects) project you have, 
+                            I will help you or your team for make it become reality.
+                        </p>
+                    </div>
+                    <div style={styles.aside}>
+                        <h2 style={{...styles.h2,...styles.h2aside}}>#ImSearchingAJob</h2>
+                        <p style={styles.p}>
+                            I came to get my graduation bac +3 on computer science, and i'm searching a good job where i can exploit my talent, if you know one Call Me! ;).
+                        </p>
+                    </div>
+                </div>
+                <div style={styles.rowContent2}>
+                    <div style={styles.aside}>
+                        <h2 style={{...styles.h2,...styles.h2aside}}>#Contact</h2>
+                        <ul style={styles.ul}>
+                            <li style={styles.li}>+243821419199</li>
+                            <li style={styles.li}>+243997187449</li>
+                            <li style={styles.li}>seleshabani4@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     )
@@ -97,6 +111,30 @@ const styles = {
     },
     h2aside:{
         textAlign:'left'
+    },
+    row:{
+        display:'flex',
+        flexDirection:'row',
+        justifyContent:'space-between',
+        alignContent:'center',
+        alignItems:'baseline'
+    },
+    rowContent1:{
+        width:'60%'
+    },
+    rowContent2:{
+        width:'30%'
+    },
+    ul:{
+        listStyle:'none',
+        fontFamily:'Nerko One',
+        textAlign:'left',
+        marginTop:'0',
+        fontSize:'1.5rem',
+        paddingLeft:'0'
+    },
+    li:{
+        marginBottom:'10px'
     }
 }
 export default About;
