@@ -1,11 +1,11 @@
 import { Card, CardContent, CardDescription, Icon } from 'semantic-ui-react'
 import styles from '../assets/skillsStyles';
-const Otherdev = ()=>{
+const Otherdev = ({theme})=>{
     return (
         <div style={styles.row}>
                 <h2 style={styles.h2}>#Others</h2>
                 <div style={styles.rowContent}>
-                    <Card style={styles.card}>
+                    <Card style={theme==='light'?styles.card:{...styles.card,...{backgroundColor:'black'}}}>
                         <CardContent>
                             <Icon style={styles.icone} name="github"/>
                         </CardContent>
@@ -13,7 +13,7 @@ const Otherdev = ()=>{
                             <h2 style={styles.h2card}>Github</h2>
                         </CardDescription>
                     </Card>
-                    <Card style={styles.card}>
+                    <Card style={theme==='light'?styles.card:{...styles.card,...{backgroundColor:'black'}}}>
                         <CardContent>
                             <Icon style={styles.icone} name="cloud"/>
                         </CardContent>
@@ -21,7 +21,7 @@ const Otherdev = ()=>{
                             <h2 style={styles.h2card}>heroku</h2>
                         </CardDescription>
                     </Card>
-                    <Card style={styles.card}>
+                    <Card style={theme==='light'?styles.card:{...styles.card,...{backgroundColor:'black'}}}>
                         <CardContent>
                             <Icon style={styles.icone} name="google"/>
                         </CardContent>

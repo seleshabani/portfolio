@@ -1,11 +1,11 @@
 import { Card, CardContent, CardDescription, Icon } from 'semantic-ui-react'
 import styles from '../assets/skillsStyles';
-const Desktopdev = ()=>{
+const Desktopdev = ({theme})=>{
     return (
         <div style={styles.row}>
                 <h2 style={styles.h2}>#Desktopdev</h2>
                 <div style={styles.rowContent}>
-                    <Card style={styles.card}>
+                    <Card style={theme==='light'?styles.card:{...styles.card,...{backgroundColor:'black'}}}>
                         <CardContent>
                             <Icon style={styles.icone} name="computer"/>
                         </CardContent>
@@ -13,7 +13,7 @@ const Desktopdev = ()=>{
                             <h2 style={styles.h2card}>Electron js</h2>
                         </CardDescription>
                     </Card>
-                    <Card style={styles.card}>
+                    <Card style={theme==='light'?styles.card:{...styles.card,...{backgroundColor:'black'}}}>
                         <CardContent>
                             <Icon style={styles.icone} name="computer"/>
                         </CardContent>
@@ -21,7 +21,7 @@ const Desktopdev = ()=>{
                             <h2 style={styles.h2card}>Vb.net</h2>
                         </CardDescription>
                     </Card>
-                    <Card style={styles.card}>
+                    <Card style={theme==='light'?styles.card:{...styles.card,...{backgroundColor:'black'}}}>
                         <CardContent>
                             <Icon style={styles.icone} name="computer"/>
                         </CardContent>

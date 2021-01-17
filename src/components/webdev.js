@@ -1,11 +1,11 @@
 import { Card, CardContent, CardDescription, Icon } from 'semantic-ui-react'
 import styles from '../assets/skillsStyles';
-const Webdev = ()=>{
+const Webdev = ({theme})=>{
     return (
         <div style={styles.row}>
                 <h2 style={styles.h2}>#webdev</h2>
                 <div style={styles.rowContent}>
-                    <Card style={styles.card}>
+                    <Card style={theme==='light'?styles.card:{...styles.card,...{backgroundColor:'black'}}}>
                         <CardContent>
                             <Icon style={styles.icone} name="node js"/>
                         </CardContent>
@@ -13,7 +13,7 @@ const Webdev = ()=>{
                             <h2 style={styles.h2card}>Node js</h2>
                         </CardDescription>
                     </Card>
-                    <Card style={styles.card}>
+                    <Card style={theme==='light'?styles.card:{...styles.card,...{backgroundColor:'black'}}}>
                         <CardContent>
                             <Icon style={styles.icone} name="laravel"/>
                         </CardContent>
@@ -21,7 +21,7 @@ const Webdev = ()=>{
                             <h2 style={styles.h2card}>Laravel</h2>
                         </CardDescription>
                     </Card>
-                    <Card style={styles.card}>
+                    <Card style={theme==='light'?styles.card:{...styles.card,...{backgroundColor:'black'}}}>
                         <CardContent>
                             <Icon style={styles.icone} name="php"/>
                         </CardContent>
@@ -31,7 +31,7 @@ const Webdev = ()=>{
                     </Card>
                 </div>
                 <div style={styles.rowContent2}>
-                    <Card style={styles.card}>
+                    <Card style={theme==='light'?styles.card:{...styles.card,...{backgroundColor:'black'}}}>
                         <CardContent>
                             <Icon style={styles.icone} name="react"/>
                         </CardContent>
@@ -39,7 +39,7 @@ const Webdev = ()=>{
                             <h2 style={styles.h2card}>React</h2>
                         </CardDescription>
                     </Card>
-                    <Card style={styles.card}>
+                    <Card style={theme==='light'?styles.card:{...styles.card,...{backgroundColor:'black'}}}>
                         <CardContent>
                             <Icon style={styles.icone} name="wordpress"/>
                         </CardContent>

@@ -20,29 +20,17 @@ const Skils = ()=>{
     const selectView = ()=>{
         switch (view) {
             case 1:
-                return <Webdev/>
+                return <Webdev theme={RootState.theme}/>
             case 2:
-                return <Desktopdev/>
+                return <Desktopdev theme={RootState.theme}/>
             case 3:
-                return <Mobiledev/>
+                return <Mobiledev theme={RootState.theme}/>
             case 4:
-                return <Otherdev/>
+                return <Otherdev theme={RootState.theme}/>
             default:
                 break;
         }
     }
-    useEffect(()=>{
-        let cards = document.querySelectorAll('.ui.card');
-        if (RootState.theme==='dark') {
-            cards.forEach(card=>{
-                card.style.backgroundColor = 'black';
-            })
-        }else{
-            cards.forEach(card=>{
-                card.style.backgroundColor = 'white';
-            })
-        }
-    },[view,RootState])
     
     return(
         <div style={styles.main}>

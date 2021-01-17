@@ -3,7 +3,7 @@ import { Card, CardContent, Reveal,Image, CardHeader, CardDescription, } from 's
 import placeholder from '../assets/placeholder.png'
 const RealCard = ({title,image,description,themeStyle})=>{
     return <Reveal animated='move down'>
-                <Reveal.Content visible>
+                <Reveal.Content hidden>
                 <Card style={themeStyle}>
                     <CardDescription>
                     <h3 style={themeStyle}>{title}</h3>
@@ -13,14 +13,14 @@ const RealCard = ({title,image,description,themeStyle})=>{
                     </CardContent>
                 </Card>
                 </Reveal.Content>
-                <Reveal.Content hidden>
+                <Reveal.Content visible>
                     <Image style={styles.img} src={placeholder} rounded size="medium"/>
                 </Reveal.Content>
             </Reveal>
 }
 const styles = {
     img:{
-        width:'291px'
+        width:'285px'
     }
 }
 export default RealCard;

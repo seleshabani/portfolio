@@ -4,7 +4,9 @@ import {useSelector} from 'react-redux'
 const Realisations = ()=>{
     const reducerState = useSelector(dr=>dr.defaultReducer);
     return(
-        <div>
+        <div style={styles.main}>
+            <RealCard themeStyle={reducerState.theme==='light'?styles.cardLight:styles.cardDark}/>
+            <RealCard themeStyle={reducerState.theme==='light'?styles.cardLight:styles.cardDark}/>
             <RealCard themeStyle={reducerState.theme==='light'?styles.cardLight:styles.cardDark}/>
         </div>
     )
@@ -12,7 +14,11 @@ const Realisations = ()=>{
 const styles = {
     main:{
         display:'flex',
-        fontFamily:'Nerko One'
+        flexDirection:'row',
+        justifyContent:'space-between',
+        alignContent:'center',
+        alignItems:'baseline',
+        fontFamily:'Nerko One',
     },
     cardLight:{
         color:'black',

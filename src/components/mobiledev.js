@@ -1,11 +1,11 @@
 import { Card, CardContent, CardDescription, Icon } from 'semantic-ui-react'
 import styles from '../assets/skillsStyles';
-const Mobiledev = ()=>{
+const Mobiledev = ({theme})=>{
     return (
         <div style={styles.row}>
                 <h2 style={styles.h2}>#MobileDev</h2>
                 <div style={styles.rowContent}>
-                    <Card style={styles.card}>
+                    <Card style={theme==='light'?styles.card:{...styles.card,...{backgroundColor:'black'}}}>
                         <CardContent>
                             <Icon style={styles.icone} name="react"/>
                         </CardContent>
