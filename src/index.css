@@ -14,24 +14,13 @@ code {
 h1{
   font-family: 'Nerko One';
 }
-.App{
+.app{
   width: 80%!important;
   margin: auto!important;
 }
 .TabsMenu{
   margin-bottom: 35px!important;
 }
-.about_brand{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-content: center;
-  align-items: flex-start;
-}
-.about_brand h1{
-  margin-left: 30px!important;
-  font-size: 3rem!important;
-}
-.ui.toggle.checkbox input:checked~.box:before, .ui.toggle.checkbox input:checked~label:before{
-  background-color: coral!important;
+.canvas {
+  width: 100%!important; height: 100%!important; position: absolute; z-index: -1; top: 0px; left: 0px;
 }
